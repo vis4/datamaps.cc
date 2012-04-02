@@ -1,0 +1,33 @@
+{
+    "proj": {
+        "id": "laea"
+    },
+    "layers": [{
+      "id": "admin1",
+      "src": "src/shp/naturalearth/ne_10m_admin_1_states_provinces_shp.shp",
+      "attributes": {
+        "FIPS_1": "fips",
+        "NAME_1": "name",
+        "VARNAME_1": "varname",
+        "Postal": "postal",
+        "HASC_1": "hasc",
+        "POP_EST": "population",
+        "GDP_MD_EST": "gdp"
+      },
+      "filter": ["ISO", "=", "{{ ISO }}"],
+      "simplify": 1
+    }],
+    "bounds": {
+        "mode": "polygons",
+        "data": {
+            "layer": "admin1",
+            "attribute": "ISO",
+            "values": ["{{ ISO }}"]
+        }
+    },
+    "export": {
+        "width": 500,
+        "height": 400,
+        "round": 0
+    }
+}

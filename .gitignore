@@ -1,0 +1,4 @@
+*.pyc
+src/shp/*
+upload
+maps.zip
