@@ -5,7 +5,7 @@ from countryInfo import countries
 from countryInfo import iso2latlon
 import json
 
-tpl = open('src/map-template.json').read()
+tpl = open('src/templates/admin1.json').read()
 K = Kartograph()
 
 for country in countries:
